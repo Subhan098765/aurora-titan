@@ -45,7 +45,7 @@ class AuthNotifier extends Notifier<AuthState> {
     state = state.copyWith(isLoading: true, error: null);
     try {
       final response = await http.post(
-        Uri.parse('http://127.0.0.1:8000/api/v1/auth/login'),
+        Uri.parse('https://aurora-titan-896824917672.europe-west1.run.app/api/v1/auth/login'),
         headers: {'Content-Type': 'application/x-www-form-urlencoded'},
         body: {'username': username, 'password': password},
       );
@@ -77,7 +77,7 @@ class AuthNotifier extends Notifier<AuthState> {
     state = state.copyWith(isLoading: true, error: null);
     try {
       final response = await http.post(
-        Uri.parse('http://127.0.0.1:8000/api/v1/auth/register'),
+        Uri.parse('https://aurora-titan-896824917672.europe-west1.run.app/api/v1/auth/register'),
         headers: {'Content-Type': 'application/json'},
         body: jsonEncode({'username': username, 'password': password, 'role': role}),
       );

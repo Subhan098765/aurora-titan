@@ -6,7 +6,7 @@ import '../core/result.dart';
 final resourcesProvider = FutureProvider<Result<List<dynamic>>>((ref) async {
   try {
     final response = await http
-        .get(Uri.parse('http://127.0.0.1:8000/api/v1/resources'))
+        .get(Uri.parse('https://aurora-titan-896824917672.europe-west1.run.app/api/v1/resources'))
         .timeout(const Duration(seconds: 3));
     if (response.statusCode == 200) {
       return Success(jsonDecode(response.body) as List<dynamic>);

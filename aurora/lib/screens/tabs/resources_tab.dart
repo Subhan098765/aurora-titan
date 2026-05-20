@@ -122,7 +122,7 @@ class ResourcesTabState extends ConsumerState<ResourcesTab> {
 
                     try {
                       final response = await http.post(
-                        Uri.parse('http://127.0.0.1:8000/api/v1/resources'),
+                        Uri.parse('https://aurora-titan-896824917672.europe-west1.run.app/api/v1/resources'),
                         headers: {
                           'Content-Type': 'application/json',
                           if (token != null) 'Authorization': 'Bearer $token',

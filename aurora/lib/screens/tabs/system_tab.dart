@@ -43,14 +43,14 @@ class _SystemTabState extends State<SystemTab> {
   }
 
   Future<void> _connectWebSocket() async {
-    _wsService.connect('ws://127.0.0.1:8000/ws/stream');
+    _wsService.connect('wss://aurora-titan-896824917672.europe-west1.run.app/ws/stream');
   }
 
   Future<void> _runLiveAnalysis() async {
     _wsService.send('AURORA_CLIENT_CONNECTED');
     try {
       await http.post(
-        Uri.parse('http://127.0.0.1:8000/api/v1/analyze-crisis'),
+        Uri.parse('https://aurora-titan-896824917672.europe-west1.run.app/api/v1/analyze-crisis'),
         headers: {'Content-Type': 'application/json'},
         body: jsonEncode({
           'signals': [
