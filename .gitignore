@@ -1,0 +1,33 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Databases
+*.db
+aurora_backend/aurora.db
+
+# Virtual Environments
+venv/
+.venv/
+env/
+ENV/
+aurora_backend/venv/
+
+# IDEs
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Flutter Web & App Build Artifacts
+aurora/.dart_tool/
+aurora/build/
+aurora/.flutter-plugins
+aurora/.flutter-plugins-dependencies
+aurora/.pub-cache/
+aurora/.pub/

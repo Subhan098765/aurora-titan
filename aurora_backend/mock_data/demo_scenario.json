@@ -1,0 +1,36 @@
+{
+  "scenario_id": "SCN-20260517-01",
+  "title": "G-10 Flooding vs. Water-Main Burst",
+  "raw_signals": [
+    {"source": "social", "text": "Huge flooding in G-10 markaz!", "timestamp": "2026-05-17T15:00:00Z"},
+    {"source": "weather_api", "data": {"precipitation_mm": 45, "status": "heavy_rain"}, "timestamp": "2026-05-17T15:05:00Z"},
+    {"source": "traffic_api", "data": {"status": "slowdown", "speed_kmh": 10}, "timestamp": "2026-05-17T15:08:00Z"},
+    {"source": "field_report", "text": "It's a water-main burst, not just rain. Pipe burst near the main intersection.", "timestamp": "2026-05-17T15:15:00Z"},
+    {"source": "social", "text": "Heat emergency in nearby low-income neighborhood. ACs are failing.", "timestamp": "2026-05-17T15:20:00Z"}
+  ],
+  "antigravity_outputs": {
+    "signal_fusion": {
+      "detected_events": ["Water-Main Burst", "Heatwave (Secondary)"],
+      "conflict_detected": true,
+      "conflict_details": "Social media reports flooding, field report identifies root cause as water-main burst.",
+      "confidence": 0.85
+    },
+    "classification": {
+      "primary_crisis": "Infrastructure Failure (Water-Main)",
+      "severity": "CRITICAL",
+      "location": "G-10 Markaz, Islamabad",
+      "affected_population": 15000
+    },
+    "evolution": {
+      "spread_radius_km": 2.5,
+      "peak_impact_time": "2026-05-17T16:30:00Z"
+    },
+    "resources": {
+      "allocations": [
+        {"type": "Drone", "eta_mins": 3, "task": "Visual Verification"},
+        {"type": "Ambulance", "eta_mins": 12, "task": "Standby for injuries"}
+      ],
+      "tradeoffs": "Diverting drones from F-Sector."
+    }
+  }
+}
