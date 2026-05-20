@@ -51,7 +51,7 @@ class _AssistantTabState extends State<AssistantTab> {
     
     try {
       final response = await http
-          .post(Uri.parse('https://aurora-titan-896824917672.europe-west1.run.app/api/v1/chat'),
+          .post(Uri.parse('https://aurora-titan-1-896824917672.europe-west1.run.app/api/v1/chat'),
               headers: {'Content-Type': 'application/json'},
               body: jsonEncode({'question': query.isEmpty ? 'Analyze this image.' : query, 'image_base64': base64Image}))
           .timeout(const Duration(seconds: 15)); // Vision takes longer

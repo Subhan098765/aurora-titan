@@ -6,7 +6,7 @@ import '../core/result.dart';
 final mapCrisesProvider = FutureProvider<Result<List<dynamic>>>((ref) async {
   try {
     final response = await http
-        .get(Uri.parse('https://aurora-titan-896824917672.europe-west1.run.app/api/v1/crises/live'))
+        .get(Uri.parse('https://aurora-titan-1-896824917672.europe-west1.run.app/api/v1/crises/live'))
         .timeout(const Duration(seconds: 5));
     if (response.statusCode == 200) {
       final data = jsonDecode(response.body);
